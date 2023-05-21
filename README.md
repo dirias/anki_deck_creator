@@ -17,3 +17,6 @@ Since this report is for personal usage, I have some folders with data of person
 1. Make sure to install the genanki library: pip install genanki.
 2. The just run the scrip: python3 script_name.py
 3. Note: make sure to change the data source, for the one of interest, and verify if it is in the currect format.
+
+
+Note: An example of output data can be found on the anki_apkg folder.
