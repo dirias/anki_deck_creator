@@ -38,14 +38,14 @@ def aws_cloud_practitioner_data():
             ("¿En qué consiste AWS Single Sign-On (SSO)?", "AWS Single Sign-On (SSO) implementa el inicio de sesión único (Single Sign On/SSO)."),
             ("¿Cuál es la función de Amazon Cognito?", "Amazon Cognito permite a los usuarios administrar la identidad dentro de las aplicaciones."),
             ("¿Qué ofrece AWS Directory Service?", "AWS Directory Service implementa y administra un servicio de Directorio Activo (Active Directory Service)."),
-            ("¿En qué consiste AWS Organizations?", "AWS Organizations funciona para gobernar y administrar distintas cuentas de AWS de forma centralizada.")
+            ("¿En qué consiste AWS Organizations?", "AWS Organizations funciona para gobernar y administrar distintas cuentas de AWS de forma centralizada."),
             ("¿Qué es IAM (Identity and Access Management)?", "Identity and Access Management (IAM) es un servicio gratuito que nos ayuda a administrar los accesos a los servicios y recursos de nuestra cuenta en AWS."),
             ("¿Cuáles son los principales componentes de IAM?", "Los principales componentes de IAM son los usuarios y grupos de usuarios."),
             ("¿Qué es un usuario Root en IAM?", "El usuario Root es el usuario proporcionado al crear la cuenta de AWS y tiene acceso a todos los recursos. Puede crear otros perfiles de usuarios con acceso único a distintos recursos."),
             ("¿Qué son las políticas en IAM?", "Las políticas en IAM son utilizadas para establecer permisos de acceso a los recursos. Definen qué acciones están permitidas o denegadas para los usuarios o grupos de usuarios."),
             ("¿Puedes proporcionar un ejemplo de una política que otorga acceso de administrador?", "Sí, aquí tienes un ejemplo de una política de IAM que otorga acceso de administrador:\n\n{\n    \"Version\": \"2012-10-17\",\n    \"Statement\": [\n        {\n            \"Effect\": \"Allow\",\n            \"Action\": \"*\",\n            \"Resource\": \"*\"\n        }\n    ],\n}"),
             ("¿Puedes proporcionar un ejemplo de políticas de acceso a un bucket de S3?", "Sí, aquí tienes un ejemplo de políticas de IAM para acceder a un bucket de S3:\n\n{\n    \"Version\": \"2012-10-17\",\n    \"Statement\": [\n        {\n            \"Effect\": \"Allow\",\n            \"Action\": [\n                \"s3:ListBucket\"\n            ],,\n            \"Resource\": \"arn:aws:s3:::bucket-name\"\n        },\n        {\n            \"Effect\": \"Allow\",\n            \"Action\": [\n                \"s3:GetObject\",\n                \"s3:PutObject\"\n            ],,\n            \"Resource\": \"arn:aws:s3:::bucket-name/*\"\n        }\n    ],\n}"),
-            ("¿Qué son los roles en IAM?", "Los roles en IAM permiten asumir identidades y otorgar permisos a otras tecnologías. Por ejemplo, podemos conceder a una máquina virtual el acceso a una base de datos mediante un rol de IAM.")
+            ("¿Qué son los roles en IAM?", "Los roles en IAM permiten asumir identidades y otorgar permisos a otras tecnologías. Por ejemplo, podemos conceder a una máquina virtual el acceso a una base de datos mediante un rol de IAM."),
             ("¿Qué es Secrets Manager de AWS?", "Secrets Manager es un servicio de AWS que nos ayuda a proteger los datos secretos necesarios para acceder a nuestras aplicaciones, servicios y recursos."),
             ("¿Qué tipo de datos secretos puede proteger Secrets Manager?", "Secrets Manager puede proteger contraseñas, claves y tokens necesarios para acceder a diferentes recursos."),
             ("¿Cuál es una ventaja de usar Secrets Manager?", "Una ventaja de usar Secrets Manager es que nos permite compartir automáticamente la información de los secretos cuando sea necesario, evitando tener que copiar y pegar los secretos directamente en nuestro código."),
@@ -88,7 +88,7 @@ def aws_cloud_practitioner_data():
             ("Amazon Snow Family", "Familia de dispositivos desde un disco duro portátil hasta un semi-remolque completo lleno de discos de almacenamiento. Estos dispositivos te permiten cargar archivos en ellos, para luego ser enviados a Amazon y cargados en sus servidores."),
             ("AWS Wavelength", "Permite acceder a los servicios AWS desde dispositivos 5G sin pasar por Internet."),
             ("VMWare AWS", "Permite migrar cargas de trabajo de VMWare a AWS."),
-            ("AWS Local Zones", "Permite ejecutar las aplicaciones más cerca de los usuarios finales, a una menor latencia.")
+            ("AWS Local Zones", "Permite ejecutar las aplicaciones más cerca de los usuarios finales, a una menor latencia."),
         ],
 
         "EC2" : [
@@ -96,7 +96,7 @@ def aws_cloud_practitioner_data():
         ("¿Qué opciones ofrece EC2 en términos de tipos de instancias?", "EC2 ofrece diferentes tipos de instancias con características de CPU, RAM y almacenamiento variables. Puedes elegir instancias optimizadas para cómputo, memoria, almacenamiento y otras necesidades específicas."),
         ("¿Cómo se realiza el pago en EC2?", "El sistema de pago más común en EC2 es por hora o por segundo, dependiendo del tipo de instancia que elijas. El costo se calcula por el tiempo de uso de la instancia."),
         ("¿Cómo funciona el sistema de pago por hora en EC2?", "Si tienes una instancia que cuesta $0.1 por hora, puedes pagar por una instancia durante 24 horas y se te cobrará $2.4 en total. En este caso, el costo se mantiene constante independientemente de cuántas instancias utilices dentro de ese período de tiempo."),
-        ("¿Qué ocurre si elijo pagar por segundo en EC2?", "Si el tipo de instancia admite el pago por segundo, el costo se calcula en función de los segundos reales de uso. Esto proporciona una mayor flexibilidad y precisión en el pago.")
+        ("¿Qué ocurre si elijo pagar por segundo en EC2?", "Si el tipo de instancia admite el pago por segundo, el costo se calcula en función de los segundos reales de uso. Esto proporciona una mayor flexibilidad y precisión en el pago."),
     ],
 
         "contenedores" : [
@@ -125,25 +125,25 @@ def aws_cloud_practitioner_data():
         ("¿En qué se diferencia S3 Zone-IA de las demás clases de almacenamiento de S3?", "S3 Zone-IA almacena datos en una única zona de disponibilidad, a diferencia de las demás clases que utilizan un mínimo de tres zonas de disponibilidad."),
         ("¿Cuál es el propósito de S3 Glacier?", "S3 Glacier ofrece el almacenamiento de menor costo para los datos de larga duración y acceso poco frecuente. Tiene opciones de recuperación de datos estándar, masiva y acelerada."),
         ("¿Cuál es la principal característica de S3 Glacier Deep Archive?", "S3 Glacier Deep Archive es la clase de almacenamiento más económica de Amazon S3, diseñada para la retención a largo plazo y la conservación digital de datos a los que se accede una o dos veces al año."),
-        ("¿Qué ofrece S3 Intelligent-Tiering?", "S3 Intelligent-Tiering es un tipo de almacenamiento que intenta ahorrar costos moviendo archivos entre los distintos tipos de almacenamiento S3, basado en los patrones de uso de los archivos.")
+        ("¿Qué ofrece S3 Intelligent-Tiering?", "S3 Intelligent-Tiering es un tipo de almacenamiento que intenta ahorrar costos moviendo archivos entre los distintos tipos de almacenamiento S3, basado en los patrones de uso de los archivos."),
     ],
 
     "EFS" : [
         ("Amazon Elastic File System (EFS)", "Es un sistema de archivos elástico, sencillo, sin servidor y práctico basado en NFS para las máquinas virtuales de EC2."),
-        ("NFS", "Es un protocolo de archivos en red que permite acceder a archivos y directorios que no están en tu sistema. Esto permite que miles de máquinas puedan conectarse a EFS y procesar los datos que allí se encuentran.")
+        ("NFS", "Es un protocolo de archivos en red que permite acceder a archivos y directorios que no están en tu sistema. Esto permite que miles de máquinas puedan conectarse a EFS y procesar los datos que allí se encuentran."),
         ("¿Qué características ofrece EFS?", "EFS es altamente disponible y duradero. Provee protección contra una interrupción de la zona de disponibilidad, replicando los archivos en múltiples zonas dentro de una región."),
         ("¿Cuáles son las dos clases de almacenamiento que brinda EFS?", "EFS brinda las clases de almacenamiento 'Standard' y 'Standard IA' (para acceso poco frecuente)."),
         ("¿Qué puedes implementar en EFS en relación a las políticas de almacenamiento?", "Puedes implementar políticas para que tus archivos se muevan de 'Standard' a 'Standard IA' después de cierto tiempo."),
-        ("¿Cómo se encriptan los datos en EFS?", "Los datos en EFS se encriptan de manera automática.")
+        ("¿Cómo se encriptan los datos en EFS?", "Los datos en EFS se encriptan de manera automática."),
     ],
     "storage_gateway" : [
         ("AWS Storage Gateway", "Es un servicio que brinda acceso a almacenamiento en la nube prácticamente ilimitado desde tu propia infraestructura."),
         ("File Gateway", "Es una puerta de acceso de AWS Storage Gateway que provee interfaces SMB y NFS para Amazon S3, permitiendo verlo como un sistema de archivos montado en los sistemas operativos Windows y Linux."),
         ("Tape Gateway", "Es una puerta de acceso de AWS Storage Gateway que permite migrar copias de seguridad en cintas físicas a una biblioteca de cintas virtuales en AWS, almacenando los contenidos en S3."),
-        ("Volume Gateway", "Es una puerta de acceso de AWS Storage Gateway que otorga almacenamiento en bloque respaldado en la nube con protocolo iSCSI, permitiendo almacenar datos en S3 en dos modos: caché y almacenado.")
+        ("Volume Gateway", "Es una puerta de acceso de AWS Storage Gateway que otorga almacenamiento en bloque respaldado en la nube con protocolo iSCSI, permitiendo almacenar datos en S3 en dos modos: caché y almacenado."),
         ("¿Qué ofrece File Gateway de AWS Storage Gateway?", "File Gateway provee interfaces SMB y NFS para Amazon S3, permitiendo verlo como un sistema de archivos montado en los sistemas operativos Windows y Linux."),
         ("¿Qué permite hacer Tape Gateway de AWS Storage Gateway?", "Tape Gateway permite migrar copias de seguridad en cintas físicas a una biblioteca de cintas virtuales en AWS, almacenando los contenidos en S3."),
-        ("¿Cuáles son los modos de almacenamiento disponibles en Volume Gateway?", "Los modos de almacenamiento disponibles en Volume Gateway son caché (almacenamiento principal en S3 y datos de acceso frecuente en caché local) y almacenado (todos los datos se guardan localmente con copias de seguridad asíncronas en S3).")
+        ("¿Cuáles son los modos de almacenamiento disponibles en Volume Gateway?", "Los modos de almacenamiento disponibles en Volume Gateway son caché (almacenamiento principal en S3 y datos de acceso frecuente en caché local) y almacenado (todos los datos se guardan localmente con copias de seguridad asíncronas en S3)."),
     ],
     "bases_de_datos" : [
         ("Bases de datos relacionales", "Son servicios de bases de datos que se centran en el almacenamiento y gestión de datos estructurados. En AWS, los servicios de bases de datos relacionales incluyen Amazon Aurora, Amazon RDS y Amazon Redshift."),
@@ -155,38 +155,38 @@ def aws_cloud_practitioner_data():
         ("Bases de datos en memoria", "Son bases de datos que almacenan datos en memoria para un acceso más rápido. En AWS, los servicios de bases de datos en memoria incluyen Amazon ElastiCache para Memcached y Amazon ElastiCache para Redis."),
         ("Amazon ElastiCache", "Es un servicio de almacenamiento de caché en memoria completamente administrado que admite casos de uso en tiempo real y flexible, utilizado para almacenar en caché datos como la administración de sesiones, tablas de clasificación de juegos y aplicaciones Geo-Espaciales."),
         ("Bases de datos basadas en documentos", "Son bases de datos que almacenan datos en forma de documentos. En AWS, el servicio de base de datos basada en documentos es Amazon DocumentDB."),
-        ("Amazon DocumentDB", "Es un servicio de base de datos de larga duración, rápida y escalable para operar cargas de trabajo de MongoDB esenciales, utilizado en casos de uso como la gestión de contenidos, catálogos y perfiles de usuario.")
+        ("Amazon DocumentDB", "Es un servicio de base de datos de larga duración, rápida y escalable para operar cargas de trabajo de MongoDB esenciales, utilizado en casos de uso como la gestión de contenidos, catálogos y perfiles de usuario."),
         ("¿Qué es Amazon Aurora?", "Amazon Aurora es una base de datos relacional compatible con MySQL y PostgreSQL creada para la nube."),
         ("¿Cuál es el objetivo principal de Amazon Redshift?", "El objetivo principal de Amazon Redshift es permitir el análisis de datos estructurados y semiestructurados a cualquier escala, utilizando SQL."),
         ("¿Qué tipos de bases de datos se encuentran en Amazon ElastiCache?", "Amazon ElastiCache ofrece dos tipos de bases de datos en memoria: ElastiCache para Memcached y ElastiCache para Redis."),
         ("¿Cuál es el caso de uso principal de Amazon DynamoDB?", "Amazon DynamoDB es utilizado principalmente en aplicaciones de web de alto tráfico, sistemas de comercio electrónico y aplicaciones de juego."),
-        ("¿Cuál es el caso de uso común de Amazon DocumentDB?", "Un caso de uso común de Amazon DocumentDB es la gestión de contenidos, catálogos y perfiles de usuario en aplicaciones.")
+        ("¿Cuál es el caso de uso común de Amazon DocumentDB?", "Un caso de uso común de Amazon DocumentDB es la gestión de contenidos, catálogos y perfiles de usuario en aplicaciones."),
         ("Amazon RDS", "Es un servicio de AWS que permite crear, ejecutar y administrar bases de datos relacionales en la nube. Proporciona diferentes motores de bases de datos y facilita la configuración y escalabilidad de las bases de datos relacionales."),
         ("Bases de datos relacionales", "Son bases de datos en las que los datos almacenados tienen relaciones entre sí. Utilizan un lenguaje de consulta llamado SQL (Structured Query Language) para consultar y manipular los datos."),
-        ("Motores de bases de datos relacionales en Amazon RDS", "Amazon RDS ofrece varios motores de bases de datos relacionales, incluyendo MySQL, MariaDB, PostgreSQL, Oracle, SQL Server y Amazon Aurora. Estos motores proporcionan diferentes opciones y características para las bases de datos relacionales en la nube.")
+        ("Motores de bases de datos relacionales en Amazon RDS", "Amazon RDS ofrece varios motores de bases de datos relacionales, incluyendo MySQL, MariaDB, PostgreSQL, Oracle, SQL Server y Amazon Aurora. Estos motores proporcionan diferentes opciones y características para las bases de datos relacionales en la nube."),
         ("¿Qué es Amazon RDS?", "Amazon RDS es un servicio de AWS que permite crear, ejecutar y administrar bases de datos relacionales en la nube."),
         ("¿Qué caracteriza a las bases de datos relacionales?", "Las bases de datos relacionales se caracterizan por tener datos almacenados con relaciones entre sí y utilizar el lenguaje de consulta SQL."),
-        ("¿Cuáles son los motores de bases de datos relacionales disponibles en Amazon RDS?", "Los motores de bases de datos relacionales disponibles en Amazon RDS son MySQL, MariaDB, PostgreSQL, Oracle, SQL Server y Amazon Aurora.")
+        ("¿Cuáles son los motores de bases de datos relacionales disponibles en Amazon RDS?", "Los motores de bases de datos relacionales disponibles en Amazon RDS son MySQL, MariaDB, PostgreSQL, Oracle, SQL Server y Amazon Aurora."),
         ("¿Qué facilita Amazon RDS?", "Amazon RDS facilita la configuración de bases de datos relacionales en la nube."),
         ("¿Qué ofrece escalabilidad en Amazon RDS?", "Amazon RDS es altamente escalable y puede utilizarse en múltiples zonas de disponibilidad."),
         ("¿Qué permite crear Amazon RDS?", "Amazon RDS permite crear réplicas de bases de datos de solo lectura."),
         ("¿Qué realiza Amazon RDS de manera automática?", "Amazon RDS realiza copias de seguridad automáticas de las bases de datos."),
-        ("¿Cómo se realiza el pago en Amazon RDS?", "En Amazon RDS se paga únicamente por lo que se utiliza, siguiendo un modelo de pago por uso.")
+        ("¿Cómo se realiza el pago en Amazon RDS?", "En Amazon RDS se paga únicamente por lo que se utiliza, siguiendo un modelo de pago por uso."),
         ("¿Qué tipo de base de datos es DynamoDB?", "DynamoDB es una base de datos NoSQL de documentos clave-valor."),
         ("¿Qué tipo de rendimiento ofrece DynamoDB?", "DynamoDB ofrece un rendimiento en milisegundos de un solo dígito."),
         ("¿Cuál es uno de los casos de uso de DynamoDB?", "Uno de los casos de uso de DynamoDB es el manejo de datos actualizados en tiempo real."),
         ("¿Qué tipo de estructura tiene una base de datos clave-valor?", "Una base de datos clave-valor almacena datos en forma de claves y valores/atributos."),
-        ("¿Qué características pueden tener los atributos en DynamoDB?", "Los atributos en DynamoDB pueden tener diferentes tipos y valores para cada clave.")
+        ("¿Qué características pueden tener los atributos en DynamoDB?", "Los atributos en DynamoDB pueden tener diferentes tipos y valores para cada clave."),
         ("¿Qué tipo de servicio es DynamoDB?", "DynamoDB es un servicio completamente administrado (PAAS)."),
         ("¿En cuántas regiones funciona DynamoDB?", "DynamoDB funciona en múltiples regiones."),
         ("¿Cuántas solicitudes por segundo puede manejar DynamoDB?", "DynamoDB puede manejar hasta 20 millones de solicitudes por segundo."),
-        ("¿Qué funcionalidades de seguridad tiene DynamoDB?", "DynamoDB cuenta con seguridad, respaldo y restauración integrados.")
+        ("¿Qué funcionalidades de seguridad tiene DynamoDB?", "DynamoDB cuenta con seguridad, respaldo y restauración integrados."),
         ("¿Qué es Amazon ElastiCache?", "Amazon ElastiCache es un servicio de almacenamiento en memoria 100% administrado que admite casos de uso flexibles y en tiempo real."),
         ("¿Qué función cumple una base de datos en memoria?", "Una base de datos en memoria almacena datos a los que se ha accedido previamente en memoria caché, mejorando la rapidez de acceso a esos datos."),
         ("¿Por qué es más rápido consultar datos en caché que consultar directamente la base de datos?", "Consultar datos en caché es más rápido debido a que la memoria tiene un acceso más rápido que los dispositivos de almacenamiento persistente, como los discos."),
         ("¿Puedes dar un ejemplo de caso de uso de ElastiCache?", "Un ejemplo de uso de ElastiCache es un sitio de noticias al cual se accede miles de veces al día. Al mantener los artículos en una base de datos en memoria, el acceso a ellos se vuelve mucho más rápido."),
         ("¿Cuáles son los dos motores de ElastiCache?", "Los dos motores de ElastiCache son Redis y Memcached."),
-        ("¿Qué capacidades de autoscaling tiene ElastiCache?", "ElastiCache se monitorea a sí mismo continuamente y puede escalar hacia arriba o hacia abajo en función de la demanda de la aplicación.")
+        ("¿Qué capacidades de autoscaling tiene ElastiCache?", "ElastiCache se monitorea a sí mismo continuamente y puede escalar hacia arriba o hacia abajo en función de la demanda de la aplicación."),
     ],
         "conceptos": [
             ("Amazon Virtual Private Cloud (Amazon VPC)", "Permite definir y aprovisionar una red privada para nuestros recursos de AWS."),
@@ -195,14 +195,14 @@ def aws_cloud_practitioner_data():
             ("Amazon Route 53", "Permite alojar nuestro propio DNS administrado."),
             ("Elastic Load Balancing", "Permite distribuir automáticamente el tráfico de red a través de un grupo de recursos, con el fin de mejorar la escalabilidad."),
             ("AWS Global Accelerator", "Redirige el tráfico a través de la red global de AWS para mejorar el rendimiento de las aplicaciones globales."),
-            ("Amazon CloudFront", "Entrega de forma segura datos, videos y aplicaciones a clientes de todo el mundo con baja latencia.")
+            ("Amazon CloudFront", "Entrega de forma segura datos, videos y aplicaciones a clientes de todo el mundo con baja latencia."),
         ],
         "amazon_vpc_conceptos": [
             ("¿Para qué sirve Amazon VPC?", "Amazon VPC permite crear una red virtual para poder conectarnos a todos los servicios de AWS que existan en un rango de direcciones IP locales (por ejemplo, 10.0.0.0/24, que representa del rango de IP entre 10.0.0.0 y 10.0.0.255). Esta red virtual será como una pequeña comunidad cerrada para nuestras máquinas virtuales y todos los servicios que tengamos dentro de AWS."),
             ("¿Cuáles son los componentes de Amazon VPC?", "Amazon VPC posee los siguientes componentes para controlar el tráfico interno y externo de nuestras VPC:\n1. Nat Gateway: si deseamos que nuestras máquinas virtuales puedan acceder a internet, debemos utilizar este componente.\n2. Internet Gateway: permite que Internet pueda acceder a nuestra instancia de EC2.\n3. ACL Control List: controla el tráfico que vamos a permitir dentro y fuera de la VPC."),
             ("¿Qué componente de Amazon VPC se utiliza para permitir que las máquinas virtuales accedan a Internet?", "Nat Gateway"),
             ("¿Cuál es el componente de Amazon VPC que permite que Internet pueda acceder a las instancias de EC2?", "Internet Gateway"),
-            ("¿Qué componente de Amazon VPC se utiliza para controlar el tráfico permitido dentro y fuera de la VPC?", "ACL Control List")
+            ("¿Qué componente de Amazon VPC se utiliza para controlar el tráfico permitido dentro y fuera de la VPC?", "ACL Control List"),
         ],
         "elasti_cache_conceptos" : [
             ("¿Cuál es la función de ElastiCache?", "ElastiCache almacena en memoria caché las solicitudes a la base de datos para evitar consultar la base de datos cada vez que se necesite acceder a información."),
